@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Torn Quick Nav
 // @namespace    https://github.com/MandlyBanana
-// @version      0.0.3
+// @version      0.0.4
 // @description  Press Ctrl+Shift+F to open a quick navigation dialog with most Torn subpages
 // @author       You
 // @match        https://www.torn.com/*
@@ -433,7 +433,7 @@
     }
 
     document.addEventListener('keydown', e => {
-        if (    ) {
+        if (e.ctrlKey && e.shiftKey && e.key === 'F') {
             e.preventDefault();
             overlay ? close() : open();
         }
